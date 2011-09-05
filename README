@@ -1,0 +1,58 @@
+
+                    *** ARFF ***
+
+
+Intro:
+  This is the library for reading data from ARFF formatted files. Unless and
+otherwise mentioned, all paths are relative to the top of the folder for this
+project.
+
+
+Compiling the library:
+  Just run the command 'make'.
+
+
+Unit-testing:
+  Just run the command 'make test'.
+
+
+Generating doxygen documentation:
+  Just run the command 'make doc'.
+
+
+Where are the docs?
+  Starting place is here 'docs/src/html/index.html'.
+
+
+Where are the source files?
+  All the source/header files are located inside 'src' folder.
+
+
+Where are the unit-tests?
+  We are using google-test framework for writing unit-tests for this library.
+All the unit-tests can be found inside the 'tests' folder and the test cases
+used by these tests can be found inside the 'cases' folder.
+
+
+List of TODO's?
+  Just type 'grep todo -ir src' to see the list of TODO items.
+
+
+Licensing?
+  Read the file 'LICENSE'.
+
+
+Dependencies:
+ . g++ (>= v4.3.4)     [For compilation]
+ . doxygen (>= v1.6.1) [To generate documentation]
+ . make (>= v3.8.1)    [To use the already existing 'make' flow]
+
+
+Tested on:
+ . cygwin v1.7 (on win7, 32b)
+But, this library should work on all other platforms. If this is not the
+case, please let me know.
+
+
+Contact:
+  rao.thejaswi@gmail.com
