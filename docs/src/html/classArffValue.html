@@ -62,6 +62,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constructor for string/date data.  <a href="#ae2b232b572ecb05a022e22f1e16ca90d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffValue.html#ab593fb2f143d5852ce8d99b86eb6a4a1">ArffValue</a> (const <a class="el" href="classArffValue.html">ArffValue</a> &amp;src)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Copy constructor.  <a href="#ab593fb2f143d5852ce8d99b86eb6a4a1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffValue.html#a310fc75b473e5cdef2cd2d325272d8df">ArffValue</a> (<a class="el" href="arff__value_8h.html#a618674cfaa41c32291efe6766a7c9116">ArffValueEnum</a> type)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Missing value constructor.  <a href="#a310fc75b473e5cdef2cd2d325272d8df"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffValue.html#a65ee0349e1dffce71eb418c3c9d7ad2e">~ArffValue</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destructor.  <a href="#a65ee0349e1dffce71eb418c3c9d7ad2e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffValue.html#a8fe7076e9fc512935fd1603660370317">set</a> (<a class="el" href="arff__utils_8h.html#a5eb512da689eec1a7472ab97e2ab6be3">int32</a> i)</td></tr>
@@ -70,6 +72,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the data to be stored.  <a href="#abbe5018ee5766a38969d5a8c16e79a4d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffValue.html#a300bb023f006ffa72887dc57b6bbbb48">set</a> (const std::string &amp;str, <a class="el" href="arff__value_8h.html#a618674cfaa41c32291efe6766a7c9116">ArffValueEnum</a> e=STRING)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the data to be stored.  <a href="#a300bb023f006ffa72887dc57b6bbbb48"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffValue.html#ab49499a22876110ff67a56c289c08585">missing</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Whether the value is missing or not.  <a href="#ab49499a22876110ff67a56c289c08585"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="arff__value_8h.html#a618674cfaa41c32291efe6766a7c9116">ArffValueEnum</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffValue.html#ab0efa3074229f19d4f28b3d5e6e40c29">type</a> () const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Data type stored.  <a href="#ab0efa3074229f19d4f28b3d5e6e40c29"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffValue.html#a538c2bd7f00b31e8e08696b71e8b2bda">operator int32</a> () const </td></tr>
@@ -91,6 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td class="memItemLeft" align="right" valign="top">float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffValue.html#a18f98743a3da327879d4c8f882039e14">m_float</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffValue.html#a5082fe38857527ca065988797427e04d">m_str</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="arff__value_8h.html#a618674cfaa41c32291efe6766a7c9116">ArffValueEnum</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffValue.html#aae249f9df60bc0d9b3d47a6959e350fa">m_type</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffValue.html#a7fc46d69cf4f609ab57c00b7a9f731ab">m_missing</a></td></tr>
 <tr><td colspan="2"><h2>Friends</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffValue.html#aa62936c048dbccdf2c4ff340cbbc2058">operator==</a> (<a class="el" href="arff__utils_8h.html#a5eb512da689eec1a7472ab97e2ab6be3">int32</a> left, const <a class="el" href="classArffValue.html">ArffValue</a> &amp;right)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">LHS equality operator.  <a href="#aa62936c048dbccdf2c4ff340cbbc2058"></a><br/></td></tr>
@@ -224,6 +229,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 </div>
 </div>
+<a class="anchor" id="a310fc75b473e5cdef2cd2d325272d8df"></a><!-- doxytag: member="ArffValue::ArffValue" ref="a310fc75b473e5cdef2cd2d325272d8df" args="(ArffValueEnum type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ArffValue::ArffValue </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="arff__value_8h.html#a618674cfaa41c32291efe6766a7c9116">ArffValueEnum</a>&nbsp;</td>
+          <td class="paramname"> <em>type</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Missing value constructor. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>data-type </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a65ee0349e1dffce71eb418c3c9d7ad2e"></a><!-- doxytag: member="ArffValue::~ArffValue" ref="a65ee0349e1dffce71eb418c3c9d7ad2e" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -244,6 +275,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ab49499a22876110ff67a56c289c08585"></a><!-- doxytag: member="ArffValue::missing" ref="ab49499a22876110ff67a56c289c08585" args="() const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ArffValue::missing </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Whether the value is missing or not. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if missing, else false </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a34cf51bdee9bd13665576d670a651314"></a><!-- doxytag: member="ArffValue::operator float" ref="a34cf51bdee9bd13665576d670a651314" args="() const " -->
 <div class="memitem">
 <div class="memproto">
@@ -654,6 +705,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 </div>
 </div>
+<a class="anchor" id="a7fc46d69cf4f609ab57c00b7a9f731ab"></a><!-- doxytag: member="ArffValue::m_missing" ref="a7fc46d69cf4f609ab57c00b7a9f731ab" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classArffValue.html#a7fc46d69cf4f609ab57c00b7a9f731ab">ArffValue::m_missing</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>value missing or not </p>
+
+</div>
+</div>
 <a class="anchor" id="a5082fe38857527ca065988797427e04d"></a><!-- doxytag: member="ArffValue::m_str" ref="a5082fe38857527ca065988797427e04d" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -701,7 +766,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr size="1"/><address style="text-align: right;"><small>Generated on Mon Sep 5 20:52:49 2011 for arff by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Mon Sep 5 21:20:20 2011 for arff by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>

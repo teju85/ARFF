@@ -110,7 +110,8 @@ void ArffData::_cross_check_instance(ArffInstance* inst) {
         ArffValueEnum attType = attr->type();
         bool a_is_num = (attr->type() == NUMERIC);
         bool a_is_nom = (attr->type() == NOMINAL);
-        bool v_nan = ((valType != INTEGER) && (valType != FLOAT));
+        bool v_nan = ((valType != INTEGER) && (valType != FLOAT) &&
+                      (valType != NUMERIC));
         bool v_nas = (valType != STRING);
         // bad numeric/nominal
         if((a_is_num && v_nan) || (a_is_nom && v_nas)) {

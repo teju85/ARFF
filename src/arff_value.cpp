@@ -19,20 +19,22 @@ std::string arff_value2str(ArffValueEnum e) {
 ArffValue::ArffValue(int32 i/*=0*/): m_int(i),
                                      m_float(0.0),
                                      m_str(""),
-                                     m_type(INTEGER) {
+                                     m_type(INTEGER),
+                                     m_missing(false) {
 }
 
 ArffValue::ArffValue(float f): m_int(0),
                                m_float(f),
                                m_str(""),
-                               m_type(FLOAT) {
+                               m_type(FLOAT),
+                               m_missing(false) {
 }
 
 ArffValue::ArffValue(const std::string& str, bool convert/*=true*/,
-                     bool is_date/*=false*/):
-    m_int(0),
-    m_float(0.0f),
-    m_str(str) {
+                     bool is_date/*=false*/): m_int(0),
+                                              m_float(0.0f),
+                                              m_str(str),
+                                              m_missing(false) {
     m_type = (is_date)? DATE : STRING;
     if(convert && (m_type == STRING)) {
         // try float
@@ -51,7 +53,15 @@ ArffValue::ArffValue(const std::string& str, bool convert/*=true*/,
 ArffValue::ArffValue(const ArffValue& src) : m_int(src.m_int),
                                              m_float(src.m_float),
                                              m_str(src.m_str),
-                                             m_type(src.m_type) {
+                                             m_type(src.m_type),
+                                             m_missing(false) {
+}
+
+ArffValue::ArffValue(ArffValueEnum type) : m_int(0),
+                                           m_float(0.0f),
+                                           m_str(""),
+                                           m_type(type),
+                                           m_missing(true) {
 }
 
 ArffValue::~ArffValue() {
@@ -78,6 +88,10 @@ void ArffValue::set(const std::string& str, ArffValueEnum e/*=STRING*/) {
     }
     m_type = e;
     m_str = str;
+}
+
+bool ArffValue::missing() const {
+    return m_missing;
 }
 
 ArffValue::operator int32() const {
@@ -171,5 +185,3 @@ bool operator ==(float left, const ArffValue& right) {
 bool operator ==(const std::string& left, const ArffValue& right) {
     return (right == left);
 }
-
-///@todo: support missing attr

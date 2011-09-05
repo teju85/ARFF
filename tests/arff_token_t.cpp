@@ -6,6 +6,7 @@ TEST(arff_token, arff_token2str) {
     EXPECT_EQ("RELATION", arff_token2str(RELATION));
     EXPECT_EQ("ATTRIBUTE", arff_token2str(ATTRIBUTE));
     EXPECT_EQ("DATA_TOKEN", arff_token2str(DATA_TOKEN));
+    EXPECT_EQ("MISSING_TOKEN", arff_token2str(MISSING_TOKEN));
     EXPECT_EQ("NUMERIC_TOKEN", arff_token2str(NUMERIC_TOKEN));
     EXPECT_EQ("STRING_TOKEN", arff_token2str(STRING_TOKEN));
     EXPECT_EQ("DATE_TOKEN", arff_token2str(DATE_TOKEN));

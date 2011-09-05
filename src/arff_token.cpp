@@ -7,6 +7,7 @@ std::string arff_token2str(ArffTokenEnum type) {
     case RELATION:      return "RELATION";
     case ATTRIBUTE:     return "ATTRIBUTE";
     case DATA_TOKEN:    return "DATA_TOKEN";
+    case MISSING_TOKEN: return "MISSING_TOKEN";
     case NUMERIC_TOKEN: return "NUMERIC_TOKEN";
     case STRING_TOKEN:  return "STRING_TOKEN";
     case DATE_TOKEN:    return "DATE_TOKEN";

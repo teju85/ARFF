@@ -21,6 +21,8 @@ enum ArffTokenEnum {
     ATTRIBUTE,
     /** data tag */
     DATA_TOKEN,
+    /** missing */
+    MISSING_TOKEN,
     /** numeric type */
     NUMERIC_TOKEN,
     /** string type */

@@ -131,12 +131,15 @@ void ArffParser::_read_instances() {
                 end_of_file = true;
                 break;
             }
-            if(type != VALUE_TOKEN) {
-                THROW("%s expects VALUE_TOKEN, it is '%s'!",
-                      "ArffParser::_read_instances",
-                      arff_token2str(type).c_str());
+            if((type != VALUE_TOKEN) && (type != MISSING_TOKEN)) {
+                THROW("%s expects '%s' or '%s', it is '%s'!",
+                      "ArffParser::_read_instances", "VALUE_TOKEN",
+                      "MISSING_TOKEN", arff_token2str(type).c_str());
             }
-            if(aType == NUMERIC) {
+            if(type == MISSING_TOKEN) {
+                inst->add(new ArffValue(aType));
+            }
+            else if(aType == NUMERIC) {
                 inst->add(new ArffValue(tok.token_str(), true));
             }
             else if((aType == STRING) || (aType == NOMINAL)) {
@@ -151,5 +154,3 @@ void ArffParser::_read_instances() {
         }
     }
 }
-
-///@todo: use an open-source license (apache, may be?)

@@ -9,3 +9,9 @@ TEST(arff_parser, usage) {
     ArffData* data = parser.parse();
     EXPECT_NE((ArffData*)NULL, data);
 }
+
+TEST(arff_parser, missing_usage) {
+    ArffParser parser("cases/case4.arff");
+    ArffData* data = parser.parse();
+    EXPECT_NE((ArffData*)NULL, data);
+}

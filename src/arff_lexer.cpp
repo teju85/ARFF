@@ -10,6 +10,7 @@ const char ArffLexer::B_CLOSE = '}';
 const char ArffLexer::S_QUOTE = '\'';
 const char ArffLexer::D_QUOTE = '"';
 const char ArffLexer::COMMA   = ',';
+const char ArffLexer::MISS    = '?';
 
 
 ArffLexer::ArffLexer(const std::string& _file): m_scanner(NULL),
@@ -50,6 +51,10 @@ bool ArffLexer::_is_d_quote(char c) const {
 
 bool ArffLexer::_is_comma(char c) const {
     return (c == COMMA);
+}
+
+bool ArffLexer::_is_missing(char c) const {
+    return (c == MISS);
 }
 
 bool ArffLexer::_skip_comments() {
@@ -115,6 +120,9 @@ ArffToken ArffLexer::next_token() {
     else if(icompare(str, "}")) {
         token = BRKT_CLOSE;
     }
+    else if(icompare(str, "?")) {
+        token = MISSING_TOKEN;
+    }
     else if(icompare(str, "")) {
         token = END_OF_FILE;
     }
@@ -135,6 +143,15 @@ std::string ArffLexer::_read_str() {
     }
     else if(_is_bracket_close(c)) {
         return "}";
+    }
+    else if(_is_missing(c)) {
+        while(!_is_comma(c)) {
+            if(c < 0) {
+                break;
+            }
+            c = m_scanner->next();
+        }
+        return "?";
     }
     else if(_is_s_quote(c)) {
         do {

@@ -75,6 +75,12 @@ public:
     ArffValue(const ArffValue& src);
 
     /**
+     * @brief Missing value constructor
+     * @param type data-type
+     */
+    ArffValue(ArffValueEnum type);
+
+    /**
      * @brief Destructor
      */
     ~ArffValue();
@@ -97,6 +103,12 @@ public:
      * @param e whether you want 'DATE' or 'STRING' type [STRING]
      */
     void set(const std::string& str, ArffValueEnum e=STRING);
+
+    /**
+     * @brief Whether the value is missing or not
+     * @return true if missing, else false
+     */
+    bool missing() const;
 
     /**
      * @brief Data type stored
@@ -177,6 +189,8 @@ private:
     std::string m_str;
     /** data-type */
     ArffValueEnum m_type;
+    /** value missing or not */
+    bool m_missing;
 };
 
 

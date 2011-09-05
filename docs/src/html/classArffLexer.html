@@ -69,6 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td class="memItemLeft" align="right" valign="top">static const char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffLexer.html#a7c9b521442e7437f35afa1ffe5abe5ec">S_QUOTE</a> = '\''</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static const char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffLexer.html#a33d0597e474211d3112ff7c45d53b1a5">D_QUOTE</a> = '&quot;'</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static const char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffLexer.html#a90dbb00d14ae9312d42edd6ea053e1e3">COMMA</a> = ','</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffLexer.html#af84fdf1a9c4b13343457d4f6346c9c4a">MISS</a> = '?'</td></tr>
 <tr><td colspan="2"><h2>Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffLexer.html#a5f924164bfc1efa217e17ce774d59171">_read_str</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Helper function to read a string data.  <a href="#a5f924164bfc1efa217e17ce774d59171"></a><br/></td></tr>
@@ -90,6 +91,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Checks whether the input character is double quote or not.  <a href="#aef27f8723b735b10a892fe85993fc6f2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffLexer.html#aee7e31596ea1adc5f705f092290d02a2">_is_comma</a> (char c) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Checks whether the input character is comma or not.  <a href="#aee7e31596ea1adc5f705f092290d02a2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffLexer.html#a92c2d961660f020c1d268c024949bb06">_is_missing</a> (char c) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Checks whether the input character is a '?' or not.  <a href="#a92c2d961660f020c1d268c024949bb06"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Private Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classArffScanner.html">ArffScanner</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffLexer.html#a21d8572b1995b230153ce2af021477ba">m_scanner</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArffLexer.html#a3bd90521b249cd196c1468eb539b1a95">m_b_close</a></td></tr>
@@ -268,6 +271,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="memdoc">
 
 <p>Checks whether the input character is double quote or not. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>c</em>&nbsp;</td><td>character of interest </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if it is, else false </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a92c2d961660f020c1d268c024949bb06"></a><!-- doxytag: member="ArffLexer::_is_missing" ref="a92c2d961660f020c1d268c024949bb06" args="(char c) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ArffLexer::_is_missing </td>
+          <td>(</td>
+          <td class="paramtype">char&nbsp;</td>
+          <td class="paramname"> <em>c</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Checks whether the input character is a '?' or not. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>c</em>&nbsp;</td><td>character of interest </td></tr>
@@ -513,6 +543,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 </div>
 </div>
+<a class="anchor" id="af84fdf1a9c4b13343457d4f6346c9c4a"></a><!-- doxytag: member="ArffLexer::MISS" ref="af84fdf1a9c4b13343457d4f6346c9c4a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char <a class="el" href="classArffLexer.html#af84fdf1a9c4b13343457d4f6346c9c4a">ArffLexer::MISS</a> = '?'<code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>dealing with missing values </p>
+
+</div>
+</div>
 <a class="anchor" id="a7c9b521442e7437f35afa1ffe5abe5ec"></a><!-- doxytag: member="ArffLexer::S_QUOTE" ref="a7c9b521442e7437f35afa1ffe5abe5ec" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -574,7 +618,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr size="1"/><address style="text-align: right;"><small>Generated on Mon Sep 5 20:52:49 2011 for arff by&nbsp;
+<hr size="1"/><address style="text-align: right;"><small>Generated on Mon Sep 5 21:20:20 2011 for arff by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
 </body>

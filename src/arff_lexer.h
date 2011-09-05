@@ -53,6 +53,8 @@ public:
     static const char D_QUOTE;
     /** comma */
     static const char COMMA;
+    /** dealing with missing values */
+    static const char MISS;
 
 
 private:
@@ -130,6 +132,13 @@ private:
      * @return true if it is, else false
      */
     bool _is_comma(char c) const;
+
+    /**
+     * @brief Checks whether the input character is a '?' or not
+     * @param c character of interest
+     * @return true if it is, else false
+     */
+    bool _is_missing(char c) const;
 
 
     /** the scanner */
