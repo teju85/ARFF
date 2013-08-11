@@ -1,4 +1,5 @@
 #include <stdexcept>
+#include <stdio.h>
 
 #include <arff_utils.h>
 
