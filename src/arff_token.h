@@ -38,7 +38,7 @@ enum ArffTokenEnum {
     /** end of file has been reached */
     END_OF_FILE,
     /** unknown type (usually an error) */
-    UNKNOWN_TOKEN,
+    UNKNOWN_TOKEN
 };
 
 /**

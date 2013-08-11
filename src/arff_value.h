@@ -27,7 +27,7 @@ enum ArffValueEnum {
     /** nominal (only used by ArffAttr) */
     NOMINAL,
     /** unknown */
-    UNKNOWN_VAL,
+    UNKNOWN_VAL
 };
 
 /**

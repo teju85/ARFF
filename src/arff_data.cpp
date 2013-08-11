@@ -97,7 +97,7 @@ std::string ArffData::get_date_format(const std::string& name) {
 
 void ArffData::_cross_check_instance(ArffInstance* inst) {
     if(inst == NULL) {
-        THROW("ArffData: input instance pointer is null!");
+        THROW("ArffData: input instance pointer is null!", 0);
     }
     if(inst->size() != m_num_attrs) {
         THROW("%s: instance size and num-attrs mismatch inst=%d attrs=%d",

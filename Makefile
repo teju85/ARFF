@@ -17,7 +17,7 @@ GTLIB    := libgtest.a
 TEST     := arff-test
 
 CPP      := g++
-CPPFLAGS := -O2 -Wall
+CPPFLAGS := -O2 -Wall -Wextra -pedantic
 INCLUDE  := -I$(SRCDIR)
 TEST_INCLUDE := $(INCLUDE) -I$(GTESTDIR)/include -I$(GTESTDIR)
 D       := g++
